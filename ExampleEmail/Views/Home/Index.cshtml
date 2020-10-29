@@ -1,0 +1,19 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<center><h4 style="color:red;">Sending a Sample Message</h4></center>
+
+<div class="text-center">
+    <form asp-controller="Home" asp-action="SendMail" method="post">
+        <br />
+        <label class="form-control" style="margin-bottom:4px; color:aqua;">Email</label>
+        <input name="Email" class="form-control" type="text" /><br />
+        <label class="form-control" style="margin-bottom:4px; color:aqua;">Name</label>
+        <input name="Name" class="form-control" type="text" /><br />
+        <label class="form-control" style="margin-bottom:4px; color:aqua;">Message</label>
+        <textarea name="Message" class="form-control" type="text"></textarea><br />
+        <button style="width:100%" type="submit" class="btn btn-success" btn-sm>Message Send</button>
+    </form>
+</div>
